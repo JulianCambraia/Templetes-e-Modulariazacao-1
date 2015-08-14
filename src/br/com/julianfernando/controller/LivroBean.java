@@ -6,6 +6,7 @@ import java.util.List;
 import javax.faces.bean.ManagedBean;
 
 import br.com.julianfernando.models.Livro;
+import br.com.julianfernando.models.Usuario;
 
 @ManagedBean
 public class LivroBean {
@@ -83,6 +84,4 @@ public class LivroBean {
 	public void setLivros(List<Livro> livros) {
 		this.livros = livros;
 	}
-	
-	
 }

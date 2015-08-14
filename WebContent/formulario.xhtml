@@ -4,9 +4,13 @@
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:h="http://java.sun.com/jsf/html">
 
-<ui:composition template="/WEB-INF/template.xhtml">
+<ui:composition template="/WEB-INF/templates/template.xhtml">
+		<ui:param name="itemmenu1" value="Livros Mais vendidos" />
+		<ui:param name="itemmenu2" value="Livros Mais caros" />
+		<ui:param name="itemmenu3" value="Acervo Completo" />
+		<ui:param name="itemmenu5" value="Contato" />
 	<ui:define name="conteudo">
-		<h:form>
+		<h:form id="contato" >
 			<br />
 			<fieldset>
 				<legend>Cadastro básico</legend>
@@ -24,7 +28,13 @@
 				<ui:include src="/contato.xhtml" />
 				<br />
 			</fieldset>
-			<h:commandButton action="#{usuarioBean.gravar()}" value="Gravar" />
+			<h:commandButton value="Gravar">
+				<f:ajax event="click"
+					execute="contato"
+					render="contato"
+					listener="#{usuarioBean.gravar()}"  
+				/>
+			</h:commandButton>
 			<h:commandButton action="#{usuarioBean.reset()}" value="Limpar" />
 		</h:form>
 	</ui:define>
