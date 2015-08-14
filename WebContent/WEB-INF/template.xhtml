@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<title>Template</title>
+	<h:outputStylesheet name="styles.css" library="css" />
+</h:head>
+<h:body>
+	<div id="todo">
+		<div id="topo">
+			<div id="logo">
+				<h:graphicImage library="images" name="logomarca.png" styleClass="logo"/>
+			</div>
+		</div>
+
+		<div id="meio">
+			<div id="esquerda">
+				<div id="menu">
+					<div class="itemMenu">
+						<a href="javascript: void(0);"
+							onclick="ajaxHTMLmiolo('miolo', 'principal');">Principal</a>
+					</div>
+					<div class="itemMenu">
+						<a href="javascript: void(0);"
+							onclick="ajaxHTMLmiolo('miolo', 'empresa');">Empresa</a>
+					</div>
+					<div class="itemMenu">
+						<a href="javascript: void(0);"
+							onclick="ajaxHTMLmiolo('miolo', 'produtos');">Produtos</a>
+					</div>
+
+					<div class="itemMenu">
+						<a href="javascript: void(0);"
+							onclick="ajaxHTMLmiolo('miolo', 'servicos');">Serviços</a>
+					</div>
+					<div class="itemMenu">
+						<a href="javascript: void(0);"
+							onclick="ajaxHTMLmiolo('miolo', 'contato');">Contato</a>
+					</div>
+				</div>
+			</div>
+
+			<div id="miolo">
+				<div class="secao_miolo">
+					<ui:insert name="conteudo">espaço para o conteúdo da tela</ui:insert>
+				</div>
+			</div>
+
+			<div style="clear: both;"></div>
+		</div>
+
+		<div id="rodape">
+			<div id="rodape_direita">
+				Av. xxx yyy zzz, No 765<br /> Belo Horizonte - MG - CEP: 999999-000<br />
+				Email: <a href="mailto:seuemail@seudominio.com.br">seuemail@seudominio.com.br</a>
+			</div>
+		</div>
+	</div>
+</h:body>
+</html>

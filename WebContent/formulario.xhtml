@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<ui:composition template="/WEB-INF/template.xhtml">
+	<ui:define name="conteudo">
+		<h:form>
+			<br />
+			<fieldset>
+				<legend>Cadastro básico</legend>
+				<h:panelGrid columns="2">
+					<h:outputLabel value="Nome:" for="campo-nome" />
+					<h:inputText value="#{usuarioBean.usuario.nome}" id="campo-nome" />
+
+					<h:outputLabel value="Sexo:" for="campo-sexo" />
+					<h:selectOneMenu value="#{usuarioBean.usuario.sexo}" id="campo-sexo">
+						<f:selectItems value="#{usuarioBean.sexos.keySet()}" var="sx"
+							itemLabel="#{sx}"
+							itemValue="#{sx}"
+						/>
+					</h:selectOneMenu>
+					<h:commandButton action="#{usuarioBean.gravar()}" value="Gravar" />
+					<h:commandButton action="#{usuarioBean.reset()}" value="Limpar" />
+				</h:panelGrid>
+			</fieldset>
+		</h:form>
+	</ui:define>
+</ui:composition>
+</html>
