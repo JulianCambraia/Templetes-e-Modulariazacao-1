@@ -8,7 +8,7 @@ import java.util.Map;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
-import br.com.julianfernando.usuario.Usuario;
+import br.com.julianfernando.models.Usuario;
 
 @ManagedBean
 @SessionScoped

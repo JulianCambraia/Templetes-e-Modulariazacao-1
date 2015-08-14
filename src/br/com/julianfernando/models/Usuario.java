@@ -1,4 +1,4 @@
-package br.com.julianfernando.usuario;
+package br.com.julianfernando.models;
 
 public class Usuario {
 	
